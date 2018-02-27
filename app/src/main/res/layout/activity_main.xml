@@ -47,15 +47,18 @@
             android:id="@+id/name_field"
             android:layout_width="wrap_content"
             android:layout_height="49dp"
-            android:layout_marginLeft="40dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginStart="40dp"
             android:hint="@string/name"
             android:inputType="textCapWords"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/questiontop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.422"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/questiontop"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="RtlCompat" />
 
 
         <TextView
@@ -64,9 +67,9 @@
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/q1"
             android:text="@string/question1"
-            app:layout_constraintTop_toBottomOf="@id/name_field"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_field"
             tools:layout_editor_absoluteY="267dp" />
 
         <RadioGroup
@@ -130,14 +133,14 @@
             android:id="@+id/textq2"
             android:layout_width="318dp"
             android:layout_height="207dp"
-            android:paddingTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:drawableTop="@drawable/q2"
+            android:paddingTop="16dp"
             android:text="@string/question2"
-            app:layout_constraintTop_toBottomOf="@id/question1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question1"
             tools:layout_editor_absoluteY="553dp" />
 
         <RadioGroup
@@ -199,14 +202,14 @@
             android:id="@+id/textq3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:drawableTop="@drawable/q3"
+            android:paddingTop="16dp"
             android:text="@string/question3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/question2"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question2"
             tools:layout_editor_absoluteY="1140dp" />
 
         <RadioGroup
@@ -269,14 +272,14 @@
             android:id="@+id/textq4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:drawableTop="@drawable/q4"
+            android:paddingTop="16dp"
             android:text="@string/question4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/question3"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question3"
             tools:layout_editor_absoluteY="1598dp" />
 
         <RadioGroup
@@ -338,14 +341,14 @@
             android:id="@+id/textq5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:drawableTop="@drawable/q5"
+            android:paddingTop="16dp"
             android:text="@string/question5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/question4"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question4"
             tools:layout_editor_absoluteY="2039dp" />
 
         <RadioGroup
@@ -407,14 +410,14 @@
             android:id="@+id/textq6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:drawableTop="@drawable/q6"
+            android:paddingTop="16dp"
             android:text="@string/question6"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/question5"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question5"
             tools:layout_editor_absoluteY="2509dp" />
 
         <RadioGroup
@@ -476,14 +479,14 @@
             android:id="@+id/textq7"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:drawableTop="@drawable/q7"
+            android:paddingTop="16dp"
             android:text="@string/question7"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/question6"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question6"
             tools:layout_editor_absoluteY="2949dp" />
 
         <RadioGroup
@@ -545,14 +548,14 @@
             android:id="@+id/textq8"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:drawableTop="@drawable/q8"
+            android:paddingTop="16dp"
             android:text="@string/question8"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/question7"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question7"
             tools:layout_editor_absoluteY="3650dp" />
 
         <RadioGroup
@@ -614,14 +617,14 @@
             android:id="@+id/textq9"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:drawableTop="@drawable/q9"
+            android:paddingTop="16dp"
             android:text="@string/question9"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/question8"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question8"
             tools:layout_editor_absoluteY="4182dp" />
 
         <RadioGroup
@@ -683,14 +686,14 @@
             android:id="@+id/textq10"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:drawableTop="@drawable/q10"
+            android:paddingTop="16dp"
             android:text="@string/question10"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/question9"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question9"
             tools:layout_editor_absoluteY="4826dp" />
 
         <RadioGroup
