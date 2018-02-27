@@ -15,7 +15,7 @@
     <string name="q2_a3">3π</string>
     <string name="q2_a4">π(ln√2+1/2)</string>//correct answer
     <string name="q2_a5">none of the above</string>
-    <string name="question3">A circle with radius 1 is tangent to two points of the parabola y=x^2. Solve for the red area?</string>
+    <string name="question3">A circle with radius 1 is tangent to two points of the parabola y=x^2. Solve for the red area</string>
     <string name="q3_a1">3π + 2√2</string>
     <string name="q3_a2">(3√3)/4 – π/3</string>//correct answer
     <string name="q3_a3">2√2 - π/4</string>
@@ -67,4 +67,14 @@ What is the ratio of the large square's area to the small square's area?</string
     <string name="q10_a5">none of the above</string>
     <string name="submit_answer">SUBMIT</string>
     <string name="background">background</string>
+    <string name="q1img">q1</string>
+    <string name="q2img">q2</string>
+    <string name="q3img">q3</string>
+    <string name="q4img">q4</string>
+    <string name="q5img">q5</string>
+    <string name="q6img">q6</string>
+    <string name="q7img">q7</string>
+    <string name="q8img">q8</string>
+    <string name="q9img">q9</string>
+    <string name="q10img">q10</string>
 </resources>
