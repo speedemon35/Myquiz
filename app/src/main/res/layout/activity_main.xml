@@ -489,7 +489,7 @@
             app:layout_constraintTop_toBottomOf="@id/question6"
             tools:layout_editor_absoluteY="2949dp" />
 
-        <RadioGroup
+        <EditText
             android:id="@+id/question7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -497,52 +497,16 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="16dp"
+            android:hint="@string/type_a_number"
             android:orientation="vertical"
+            android:inputType="numberDecimal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textq7"
             app:layout_constraintVertical_bias="0.005">
 
-            <RadioButton
-                android:id="@+id/q7_a1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/q7_a1"
-                android:textSize="15sp"
-                android:textStyle="italic" />
 
-            <RadioButton
-                android:id="@+id/q7_a2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/q7_a2"
-                android:textSize="15sp"
-                android:textStyle="italic" />
-
-            <RadioButton
-                android:id="@+id/q7_a3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/q7_a3"
-                android:textSize="15sp"
-                android:textStyle="italic" />
-
-            <RadioButton
-                android:id="@+id/q7_a4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/q7_a4"
-                android:textSize="15sp"
-                android:textStyle="italic" />
-
-            <RadioButton
-                android:id="@+id/q7_a5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/q7_a5"
-                android:textSize="15sp"
-                android:textStyle="italic" />
-        </RadioGroup>
+        </EditText>
 
         <TextView
             android:id="@+id/textq8"

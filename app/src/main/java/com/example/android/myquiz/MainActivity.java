@@ -5,12 +5,15 @@ import static android.widget.Toast.LENGTH_LONG;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.android.myquiz.R;
+
+import org.apache.commons.lang3.BooleanUtils;
 
 import static android.widget.Toast.LENGTH_LONG;
 
@@ -45,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
         RadioGroup radioGroup6 = findViewById(R.id.question6);
         int question6Answer = radioGroup6.getCheckedRadioButtonId();
 
-        RadioGroup radioGroup7 = findViewById(R.id.question7);
-        int question7Answer = radioGroup7.getCheckedRadioButtonId();
+        EditText question7 = findViewById(R.id.question7);
+        int question7Answer = Integer.parseInt(question7.getText().toString());
 
         RadioGroup radioGroup8 = findViewById(R.id.question8);
         int question8Answer = radioGroup8.getCheckedRadioButtonId();
@@ -66,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
     private int calculateScore(int answer1, int answer2, int answer3, int answer4, int answer5, int answer6, int answer7, int answer8, int answer9, int answer10) {
 
         int score = 0;
+
 
         if (answer1 == R.id.q1_a3) {
             score +=1;
@@ -87,7 +91,8 @@ public class MainActivity extends AppCompatActivity {
         if (answer6 == R.id.q6_a4) {
             score +=1;        }
 
-        if (answer7 == R.id.q7_a2) {
+
+        if (answer7 == 16) {
             score +=1;        }
 
         if (answer8 == R.id.q8_a3) {
