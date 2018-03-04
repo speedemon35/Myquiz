@@ -1,14 +1,15 @@
 //maths problems/pictures from Presh Talwalkar https://mindyourdecisions.com/blog/
 package com.example.android.myquiz;
-import static android.widget.Toast.LENGTH_LONG;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import static android.widget.Toast.LENGTH_LONG;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,9 +20,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitAnswer(View view) {
-        //track checkboxes checked. somehow it lets radiogroups have checkboxes?
-        int numberOfCheckboxesChecked = 0;
-
 
         EditText userName = findViewById(R.id.name_field);
         String name = userName.getText().toString();
@@ -54,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
         RadioGroup radioGroup5 = findViewById(R.id.question5);
         int question5Answer = radioGroup5.getCheckedRadioButtonId();
 
-     //   CheckBox radioGroup6 = findViewById(R.id.question6);
-        int question6Answer = q6checkbox(q6a1,q6a2,q6a3,q6a4,q6a5);
+        int question6Answer = q6checkbox(q6a1, q6a2, q6a3, q6a4, q6a5);
 
         EditText question7 = findViewById(R.id.question7);
         int question7Answer = Integer.parseInt(question7.getText().toString());
@@ -78,11 +75,10 @@ public class MainActivity extends AppCompatActivity {
     private int q6checkbox(boolean q6a1, boolean q6a2, boolean q6a3, boolean q6a4, boolean q6a5) {
 
 
-        if (q6a1 && q6a4==true) {
+        if (q6a1 == true && q6a2 == false && q6a3 == false && q6a4 == true && q6a5 == false) {
             return 1;
-//no matter what i write here the user can select all options and get a pont as correct answer as long as answer 1 and 4 are selected.....
-            //tried adding a counter to limit amount of checkboxes that cna be pressed but it broke everything
-             }
+        }
+
 
         return 0;
     }
@@ -93,37 +89,45 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (answer1 == R.id.q1_a3) {
-            score +=1;
+            score += 1;
         }
 
         if (answer2 == R.id.q2_a4) {
-            score +=1;
+            score += 1;
         }
 
         if (answer3 == R.id.q3_a2) {
-            score +=1;        }
+            score += 1;
+        }
 
         if (answer4 == R.id.q4_a5) {
-            score +=1;        }
+            score += 1;
+        }
 
         if (answer5 == R.id.q5_a1) {
-            score +=1;        }
+            score += 1;
+        }
 
-        if (answer6 ==1) {
-            score +=1;        }
+        if (answer6 == 1) {
+            score += 1;
+        }
 
 
         if (answer7 == 16) {
-            score +=1;        }
+            score += 1;
+        }
 
         if (answer8 == R.id.q8_a3) {
-            score +=1;        }
+            score += 1;
+        }
 
         if (answer9 == R.id.q9_a1) {
-            score +=1;        }
+            score += 1;
+        }
 
         if (answer10 == R.id.q10_a4) {
-            score +=1;        }
+            score += 1;
+        }
 
         return score;
     }
