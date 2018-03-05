@@ -12,17 +12,17 @@ import android.widget.Toast;
 import static android.widget.Toast.LENGTH_LONG;
 
 public class MainActivity extends AppCompatActivity {
+    EditText userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        userName = findViewById(R.id.name_field);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
     public void submitAnswer(View view) {
 
-        EditText userName = findViewById(R.id.name_field);
-        String name = userName.getText().toString();
 
         CheckBox q6a1checkbox = findViewById(R.id.q6_a1);
         CheckBox q6a2checkbox = findViewById(R.id.q6_a2);
@@ -56,15 +56,15 @@ public class MainActivity extends AppCompatActivity {
 
         EditText question7 = findViewById(R.id.question7);
         String q7text = question7.getText().toString();
-    int question7Answer=0;
+        int question7Answer = 0;
 
         try {
             question7Answer = Integer.parseInt(q7text);
         } catch (NumberFormatException e) {
-            q7text = ""; // this will cause the parameter check for quantity ordered to fail and pop toast
+            q7text = ""; // this will cause the parameter check for number entered to fail and pop toast
         }
 
-        if(q7text!=null && q7text.equals("")){
+        if (q7text != null && q7text.equals("")) {
             Toast.makeText(MainActivity.this, "Enter a number for Q7", Toast.LENGTH_LONG).show();
         }
 
@@ -79,8 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
         int score = calculateScore(question1Answer, question2Answer, question3Answer, question4Answer, question5Answer, question6Answer, question7Answer, question8Answer, question9Answer, question10Answer);
 
-        Toast message = Toast.makeText(getApplicationContext(), "Thanks for playing " + name + ". Your score is " + score + "/10", LENGTH_LONG);
-        message.show();
+        Toast.makeText(getApplicationContext(), "Thanks for playing " + userName + ". Your score is " + score + "/10", LENGTH_LONG).show();
     }
 
     private int q6checkbox(boolean q6a1, boolean q6a2, boolean q6a3, boolean q6a4, boolean q6a5) {
@@ -88,10 +87,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (q6a1 == true && q6a2 == false && q6a3 == false && q6a4 == true && q6a5 == false) {
             return 1;
-        }
-
-else
-        return 0;
+        } else
+            return 0;
     }
 
     private int calculateScore(int answer1, int answer2, int answer3, int answer4, int answer5, int answer6, int answer7, int answer8, int answer9, int answer10) {
