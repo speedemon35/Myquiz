@@ -55,7 +55,18 @@ public class MainActivity extends AppCompatActivity {
         int question6Answer = q6checkbox(q6a1, q6a2, q6a3, q6a4, q6a5);
 
         EditText question7 = findViewById(R.id.question7);
-        int question7Answer = Integer.parseInt(question7.getText().toString());
+        String q7text = question7.getText().toString();
+    int question7Answer=0;
+
+        try {
+            question7Answer = Integer.parseInt(q7text);
+        } catch (NumberFormatException e) {
+            q7text = ""; // this will cause the parameter check for quantity ordered to fail and pop toast
+        }
+
+        if(q7text!=null && q7text.equals("")){
+            Toast.makeText(MainActivity.this, "Enter a number for Q7", Toast.LENGTH_LONG).show();
+        }
 
         RadioGroup radioGroup8 = findViewById(R.id.question8);
         int question8Answer = radioGroup8.getCheckedRadioButtonId();
@@ -79,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             return 1;
         }
 
-
+else
         return 0;
     }
 
